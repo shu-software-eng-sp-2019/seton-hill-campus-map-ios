@@ -12,7 +12,6 @@
 		E837E5625A7B945208FA50C8 /* Pods_shu_campus_map_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F18C2D986B3697FB9EAA69 /* Pods_shu_campus_map_iOSUITests.framework */; };
 		FF7869822214874900059DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7869812214874900059DB1 /* AppDelegate.swift */; };
 		FF7869842214874900059DB1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7869832214874900059DB1 /* FirstViewController.swift */; };
-		FF7869862214874900059DB1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7869852214874900059DB1 /* SecondViewController.swift */; };
 		FF7869892214874900059DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7869872214874900059DB1 /* Main.storyboard */; };
 		FF78698B2214874D00059DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF78698A2214874D00059DB1 /* Assets.xcassets */; };
 		FF78698E2214874D00059DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF78698C2214874D00059DB1 /* LaunchScreen.storyboard */; };
@@ -53,7 +52,6 @@
 		FF78697E2214874900059DB1 /* shu-campus-map-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shu-campus-map-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7869812214874900059DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF7869832214874900059DB1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		FF7869852214874900059DB1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		FF7869882214874900059DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF78698A2214874D00059DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF78698D2214874D00059DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 				D737801C2FE823FD9B8267CE /* Pods-shu-campus-map-iOSUITests.debug.xcconfig */,
 				4206589868D363455B3FAB2C /* Pods-shu-campus-map-iOSUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -147,7 +144,6 @@
 				FF7869B12214999100059DB1 /* GoogleService-Info.plist */,
 				FF7869812214874900059DB1 /* AppDelegate.swift */,
 				FF7869832214874900059DB1 /* FirstViewController.swift */,
-				FF7869852214874900059DB1 /* SecondViewController.swift */,
 				FF7869872214874900059DB1 /* Main.storyboard */,
 				FF78698A2214874D00059DB1 /* Assets.xcassets */,
 				FF78698C2214874D00059DB1 /* LaunchScreen.storyboard */,
@@ -409,7 +405,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF7869862214874900059DB1 /* SecondViewController.swift in Sources */,
 				FF7869822214874900059DB1 /* AppDelegate.swift in Sources */,
 				FF7869842214874900059DB1 /* FirstViewController.swift in Sources */,
 			);
