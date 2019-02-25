@@ -9,6 +9,9 @@
 import Mapbox
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
+    
+    private var SetonHill: MGLCoordinateBounds!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +39,21 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
 
         // Add marker `shu` to the map.
         mapView.addAnnotation(shu)
+        let shu = MGLPointAnnotation()
+        shu.coordinate = CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622)
+        shu.title = "Seton Hill University"
+        shu.subtitle = "SHU Admin Building"
+        
+        // Seton Hill bounds
+        // Colorado’s bounds
+        let northeast = CLLocationCoordinate2D(latitude: 40.336966, longitude: 79.525452)
+        let southwest = CLLocationCoordinate2D(latitude: 40.28413, longitude: -79.598397)
+        SetonHill = MGLCoordinateBounds(sw: southwest, ne: northeast)
+        
+        view.addSubview(mapView)
+        
+        // Add marker `hello` to the map.
+        mapView.addAnnotation(hello)
     }
     
     // Use the default marker. See also: our view annotation or custom marker examples.
@@ -55,6 +73,26 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         // Fallback to the default marker image.
         return nil
+    func mapView(_ mapView: MGLMapView, shouldChangeFrom oldCamera: MGLMapCamera, to newCamera: MGLMapCamera) -> Bool {
+        
+        // Get the current camera to restore it after.
+        let currentCamera = mapView.camera
+        
+        // From the new camera obtain the center to test if it’s inside the boundaries.
+        let newCameraCenter = newCamera.centerCoordinate
+        
+        // Set the map’s visible bounds to newCamera.
+        mapView.camera = newCamera
+        let newVisibleCoordinates = mapView.visibleCoordinateBounds
+        
+        // Revert the camera.
+        mapView.camera = currentCamera
+        
+        // Test if the newCameraCenter and newVisibleCoordinates are inside self.SetonHill.
+        let inside = MGLCoordinateInCoordinateBounds(newCameraCenter, self.SetonHill)
+        let intersects = MGLCoordinateInCoordinateBounds(newVisibleCoordinates.ne, self.SetonHill) && MGLCoordinateInCoordinateBounds(newVisibleCoordinates.sw, self.SetonHill)
+        
+        return inside && intersects
     }
     
     // Allow callout view to appear when an annotation is tapped.
