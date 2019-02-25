@@ -20,6 +20,7 @@
 		FF7869B32214999100059DB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF7869B12214999100059DB1 /* GoogleService-Info.plist */; };
 		FF7869B42214999100059DB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF7869B12214999100059DB1 /* GoogleService-Info.plist */; };
 		FFA5E07D221DBFA200081414 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07C221DBFA200081414 /* MapViewController.swift */; };
+		FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07E221DF8D300081414 /* CustomMarker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FF7869A52214874D00059DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF7869B12214999100059DB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFA5E07C221DBFA200081414 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FFA5E07E221DF8D300081414 /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				FF78698C2214874D00059DB1 /* LaunchScreen.storyboard */,
 				FF78698F2214874D00059DB1 /* Info.plist */,
 				FFA5E07C221DBFA200081414 /* MapViewController.swift */,
+				FFA5E07E221DF8D300081414 /* CustomMarker.swift */,
 			);
 			path = "shu-campus-map-iOS";
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF7869822214874900059DB1 /* AppDelegate.swift in Sources */,
+				FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */,
 				FFA5E07D221DBFA200081414 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
