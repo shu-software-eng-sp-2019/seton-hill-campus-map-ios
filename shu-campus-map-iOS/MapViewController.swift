@@ -14,22 +14,26 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         let mapView = MGLMapView(frame: view.bounds)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        let camera = mapView.camera
+        camera.pitch = 60
+        mapView.setCamera(camera, animated: false)
+        mapView.minimumZoomLevel = 12
         
         // Set the map’s center coordinate and zoom level.
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.7326808, longitude: -73.9843407), zoomLevel: 12, animated: false)
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622), zoomLevel: 16, animated: false)
         view.addSubview(mapView)
         
         // Set the delegate property of our map view to `self` after instantiating it.
         mapView.delegate = self
         
         // Declare the marker `hello` and set its coordinates, title, and subtitle.
-        let hello = MGLPointAnnotation()
-        hello.coordinate = CLLocationCoordinate2D(latitude: 40.7326808, longitude: -73.9843407)
-        hello.title = "Hello world!"
-        hello.subtitle = "Welcome to my marker"
+        let shu = MGLPointAnnotation()
+        shu.coordinate = CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622)
+        shu.title = "Seton Hill University"
+        shu.subtitle = "SHU Admin Building"
         
-        // Add marker `hello` to the map.
-        mapView.addAnnotation(hello)
+        // Add marker `shu` to the map.
+        mapView.addAnnotation(shu)
     }
     
     // Use the default marker. See also: our view annotation or custom marker examples.
