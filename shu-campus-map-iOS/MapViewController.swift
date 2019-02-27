@@ -10,53 +10,46 @@ import Mapbox
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
     
-    private var SetonHill: MGLCoordinateBounds!
+    private var SetonHillBounds: MGLCoordinateBounds!
+    private var SetonHillCoords: CLLocationCoordinate2D!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        SetonHillCoords = CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622)
+        
         let mapView = MGLMapView(frame: view.bounds)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         let camera = mapView.camera
-        camera.pitch = 60
-        mapView.zoomLevel = 2
-        mapView.setCamera(camera, animated: false)
-        mapView.minimumZoomLevel = 2
+        camera.pitch = 50
+        mapView.isPitchEnabled = false
+        mapView.setCamera(camera, animated: true)
+        mapView.minimumZoomLevel = 12
         
         // Set the map’s center coordinate and zoom level.
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622), zoomLevel: 16, animated: false)
-        view.addSubview(mapView)
+        mapView.setCenter(SetonHillCoords, zoomLevel: 14, animated: false)
         
         // Set the delegate property of our map view to `self` after instantiating it.
         mapView.delegate = self
         
-        // Declare the marker `hello` and set its coordinates, title, and subtitle.
-        let coordinate = CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622)
-        let shu = CustomMarker(coordinate: coordinate, title: "Seton Hill University", subtitle: "SHU Admin Building")
+        let shu = CustomMarker(coordinate: SetonHillCoords, title: "Seton Hill University", subtitle: "SHU Admin Building")
         shu.reuseIdentifier = "shuMarker"
         shu.color = .blue
         shu.image = UIImage(named: "first")
-
-        // Add marker `shu` to the map.
-        mapView.addAnnotation(shu)
-        let shu = MGLPointAnnotation()
-        shu.coordinate = CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622)
-        shu.title = "Seton Hill University"
-        shu.subtitle = "SHU Admin Building"
         
         // Seton Hill bounds
-        // Colorado’s bounds
-        let northeast = CLLocationCoordinate2D(latitude: 40.336966, longitude: 79.525452)
+        let northeast = CLLocationCoordinate2D(latitude: 40.336966, longitude: -79.525452)
         let southwest = CLLocationCoordinate2D(latitude: 40.28413, longitude: -79.598397)
-        SetonHill = MGLCoordinateBounds(sw: southwest, ne: northeast)
+        
+        
+        SetonHillBounds = MGLCoordinateBounds(sw: southwest, ne: northeast)
         
         view.addSubview(mapView)
         
-        // Add marker `hello` to the map.
-        mapView.addAnnotation(hello)
+        mapView.addAnnotation(shu)
     }
     
-    // Use the default marker. See also: our view annotation or custom marker examples.
+    // Use my marker
     func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
         if let point = annotation as? CustomMarker,
             let image = point.image,
@@ -73,6 +66,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         // Fallback to the default marker image.
         return nil
+    }
+    
     func mapView(_ mapView: MGLMapView, shouldChangeFrom oldCamera: MGLMapCamera, to newCamera: MGLMapCamera) -> Bool {
         
         // Get the current camera to restore it after.
@@ -89,8 +84,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.camera = currentCamera
         
         // Test if the newCameraCenter and newVisibleCoordinates are inside self.SetonHill.
-        let inside = MGLCoordinateInCoordinateBounds(newCameraCenter, self.SetonHill)
-        let intersects = MGLCoordinateInCoordinateBounds(newVisibleCoordinates.ne, self.SetonHill) && MGLCoordinateInCoordinateBounds(newVisibleCoordinates.sw, self.SetonHill)
+        let inside = MGLCoordinateInCoordinateBounds(newCameraCenter, self.SetonHillBounds)
+        let intersects = MGLCoordinateInCoordinateBounds(newVisibleCoordinates.ne, self.SetonHillBounds) && MGLCoordinateInCoordinateBounds(newVisibleCoordinates.sw, self.SetonHillBounds)
         
         return inside && intersects
     }
