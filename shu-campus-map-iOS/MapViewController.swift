@@ -18,11 +18,13 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         SetonHillCoords = CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622)
         
-        let mapView = MGLMapView(frame: view.bounds)
+        let styleURL = URL(string: "mapbox://styles/ck108860/cjrjllu0r06rt2sl9y702tkbe")
+        let mapView = MGLMapView(frame: view.bounds,
+                                 styleURL: styleURL)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         let camera = mapView.camera
         camera.pitch = 50
-        mapView.isPitchEnabled = false
+        mapView.isPitchEnabled = true
         mapView.setCamera(camera, animated: true)
         mapView.minimumZoomLevel = 12
         
