@@ -16,11 +16,9 @@
 		FF78698E2214874D00059DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF78698C2214874D00059DB1 /* LaunchScreen.storyboard */; };
 		FF7869992214874D00059DB1 /* shu_campus_map_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7869982214874D00059DB1 /* shu_campus_map_iOSTests.swift */; };
 		FF7869A42214874D00059DB1 /* shu_campus_map_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7869A32214874D00059DB1 /* shu_campus_map_iOSUITests.swift */; };
-		FF7869B22214999100059DB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF7869B12214999100059DB1 /* GoogleService-Info.plist */; };
-		FF7869B32214999100059DB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF7869B12214999100059DB1 /* GoogleService-Info.plist */; };
-		FF7869B42214999100059DB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF7869B12214999100059DB1 /* GoogleService-Info.plist */; };
 		FFA5E07D221DBFA200081414 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07C221DBFA200081414 /* MapViewController.swift */; };
 		FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07E221DF8D300081414 /* CustomMarker.swift */; };
+		FFDE3EB6223ED9ED00C49D8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +60,9 @@
 		FF78699F2214874D00059DB1 /* shu-campus-map-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shu-campus-map-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7869A32214874D00059DB1 /* shu_campus_map_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shu_campus_map_iOSUITests.swift; sourceTree = "<group>"; };
 		FF7869A52214874D00059DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF7869B12214999100059DB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFA5E07C221DBFA200081414 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FFA5E07E221DF8D300081414 /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
+		FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +141,8 @@
 		FF7869802214874900059DB1 /* shu-campus-map-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				FF7869B12214999100059DB1 /* GoogleService-Info.plist */,
 				FF7869812214874900059DB1 /* AppDelegate.swift */,
+				FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */,
 				FF7869872214874900059DB1 /* Main.storyboard */,
 				FF78698A2214874D00059DB1 /* Assets.xcassets */,
 				FF78698C2214874D00059DB1 /* LaunchScreen.storyboard */,
@@ -282,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF78698E2214874D00059DB1 /* LaunchScreen.storyboard in Resources */,
-				FF7869B22214999100059DB1 /* GoogleService-Info.plist in Resources */,
+				FFDE3EB6223ED9ED00C49D8E /* GoogleService-Info.plist in Resources */,
 				FF78698B2214874D00059DB1 /* Assets.xcassets in Resources */,
 				FF7869892214874900059DB1 /* Main.storyboard in Resources */,
 			);
@@ -292,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF7869B32214999100059DB1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +297,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF7869B42214999100059DB1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

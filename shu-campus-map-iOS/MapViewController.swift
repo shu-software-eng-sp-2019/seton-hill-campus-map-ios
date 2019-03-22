@@ -16,20 +16,17 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SetonHillCoords = CLLocationCoordinate2D(latitude: 40.30728689571579, longitude: -79.55396962433622)
+        SetonHillCoords = CLLocationCoordinate2D(latitude: 40.308959, longitude: -79.555997)
         
         let styleURL = URL(string: "mapbox://styles/ck108860/cjrjllu0r06rt2sl9y702tkbe")
         let mapView = MGLMapView(frame: view.bounds,
                                  styleURL: styleURL)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        let camera = mapView.camera
-        camera.pitch = 50
-        mapView.isPitchEnabled = true
-        mapView.setCamera(camera, animated: true)
+        mapView.camera = MGLMapCamera(lookingAtCenter: SetonHillCoords, altitude: 4500, pitch: 45, heading: 300)
         mapView.minimumZoomLevel = 12
         
         // Set the map’s center coordinate and zoom level.
-        mapView.setCenter(SetonHillCoords, zoomLevel: 14, animated: false)
+        mapView.setCenter(SetonHillCoords, zoomLevel: 15, animated: false)
         
         // Set the delegate property of our map view to `self` after instantiating it.
         mapView.delegate = self
