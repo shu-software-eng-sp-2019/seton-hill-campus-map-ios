@@ -24,6 +24,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.camera = MGLMapCamera(lookingAtCenter: SetonHillCoords, altitude: 4500, pitch: 45, heading: 300)
         mapView.minimumZoomLevel = 12
+        mapView.showsHeading = false
         
         // Set the map’s center coordinate and zoom level.
         mapView.setCenter(SetonHillCoords, zoomLevel: 15, animated: false)
@@ -31,21 +32,16 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         // Set the delegate property of our map view to `self` after instantiating it.
         mapView.delegate = self
         
-        let shu = CustomMarker(coordinate: SetonHillCoords, title: "Seton Hill University", subtitle: "SHU Admin Building")
-        shu.reuseIdentifier = "shuMarker"
-        shu.color = .blue
-        shu.image = UIImage(named: "first")
-        
         // Seton Hill bounds
         let northeast = CLLocationCoordinate2D(latitude: 40.336966, longitude: -79.525452)
         let southwest = CLLocationCoordinate2D(latitude: 40.28413, longitude: -79.598397)
-        
-        
         SetonHillBounds = MGLCoordinateBounds(sw: southwest, ne: northeast)
         
         view.addSubview(mapView)
-        
-        mapView.addAnnotation(shu)
+    }
+    
+    func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
+        //let pois = mapView.visibleFeatures(at: CGPoint(x: -79.55634766619221, y: 40.30778640441582))
     }
     
     // Use my marker
