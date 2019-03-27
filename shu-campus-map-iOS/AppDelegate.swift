@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Pulley
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         FirebaseApp.configure()
+        return true
+    }
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // To create from a Storyboard
+        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+        
+        // To create in code (uncomment this block)
+         
+         // Uncomment this next line to give the drawer a starting position, in this case: closed.
+         // pulleyDrawerVC.initialDrawerPosition = .closed
+         
+         //window?.rootViewController = pulleyDrawerVC
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

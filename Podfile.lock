@@ -49,10 +49,12 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Pulley (2.6.2)
 
 DEPENDENCIES:
   - Firebase/Core
   - Mapbox-iOS-SDK (~> 4.8)
+  - Pulley
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -64,6 +66,7 @@ SPEC REPOS:
     - GoogleUtilities
     - Mapbox-iOS-SDK
     - nanopb
+    - Pulley
 
 SPEC CHECKSUMS:
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
@@ -74,7 +77,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   Mapbox-iOS-SDK: 864bc732a20c183d87f04923295e988b504453d9
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Pulley: 2679a2b5a9714c5eb760b1fbb535d15c60e50fb4
 
-PODFILE CHECKSUM: 14cb19331e838a149e1a0b587cda6a6f3fe02c6f
+PODFILE CHECKSUM: 9a7dc4d1530f77a7fb55eeb0ee85eceb3d81c43c
 
 COCOAPODS: 1.6.0

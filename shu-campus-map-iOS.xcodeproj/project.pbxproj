@@ -19,6 +19,7 @@
 		FFA5E07D221DBFA200081414 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07C221DBFA200081414 /* MapViewController.swift */; };
 		FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07E221DF8D300081414 /* CustomMarker.swift */; };
 		FFDE3EB6223ED9ED00C49D8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */; };
+		FFDE3EBC224C146800C49D8E /* LegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE3EBB224C146800C49D8E /* LegendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FFA5E07C221DBFA200081414 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FFA5E07E221DF8D300081414 /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
 		FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFDE3EBB224C146800C49D8E /* LegendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		FF7869802214874900059DB1 /* shu-campus-map-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FFDE3EBA224BFF5D00C49D8E /* Services */,
 				FF7869812214874900059DB1 /* AppDelegate.swift */,
 				FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */,
 				FF7869872214874900059DB1 /* Main.storyboard */,
@@ -149,6 +152,7 @@
 				FF78698F2214874D00059DB1 /* Info.plist */,
 				FFA5E07C221DBFA200081414 /* MapViewController.swift */,
 				FFA5E07E221DF8D300081414 /* CustomMarker.swift */,
+				FFDE3EBB224C146800C49D8E /* LegendViewController.swift */,
 			);
 			path = "shu-campus-map-iOS";
 			sourceTree = "<group>";
@@ -169,6 +173,13 @@
 				FF7869A52214874D00059DB1 /* Info.plist */,
 			);
 			path = "shu-campus-map-iOSUITests";
+			sourceTree = "<group>";
+		};
+		FFDE3EBA224BFF5D00C49D8E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +370,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -368,6 +380,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +420,7 @@
 				FF7869822214874900059DB1 /* AppDelegate.swift in Sources */,
 				FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */,
 				FFA5E07D221DBFA200081414 /* MapViewController.swift in Sources */,
+				FFDE3EBC224C146800C49D8E /* LegendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

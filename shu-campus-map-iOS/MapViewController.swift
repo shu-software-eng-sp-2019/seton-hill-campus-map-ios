@@ -7,11 +7,18 @@
 //
 
 import Mapbox
+import Pulley
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
     
     private var SetonHillBounds: MGLCoordinateBounds!
     private var SetonHillCoords: CLLocationCoordinate2D!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.pulleyViewController?.displayMode = .automatic
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +43,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         let northeast = CLLocationCoordinate2D(latitude: 40.336966, longitude: -79.525452)
         let southwest = CLLocationCoordinate2D(latitude: 40.28413, longitude: -79.598397)
         SetonHillBounds = MGLCoordinateBounds(sw: southwest, ne: northeast)
+        mapView.showsUserLocation = true
         
         view.addSubview(mapView)
     }
@@ -88,5 +96,15 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     // Allow callout view to appear when an annotation is tapped.
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         return true
+    }
+}
+
+extension MapViewController: PulleyPrimaryContentControllerDelegate {
+    func makeUIAdjustmentsForFullscreen(progress: CGFloat, bottomSafeArea: CGFloat) {
+        // do something
+    }
+    
+    func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat){
+        // do something
     }
 }
