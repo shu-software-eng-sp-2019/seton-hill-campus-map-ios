@@ -77,10 +77,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qs0-SM-kfq">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8X-T3-45K">
-                                                <rect key="frame" x="0.0" y="23.5" width="375" height="0.5"/>
+                                                <rect key="frame" x="0.0" y="34.5" width="375" height="0.5"/>
                                                 <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.5" id="SyE-eM-8Jq"/>
@@ -90,11 +90,11 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="A8X-T3-45K" secondAttribute="bottom" id="QqU-PR-ckg"/>
-                                            <constraint firstAttribute="height" priority="750" constant="24" id="Vli-YE-FaP"/>
+                                            <constraint firstAttribute="height" priority="750" constant="35" id="Vli-YE-FaP"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wq3-U1-URg">
-                                        <rect key="frame" x="0.0" y="24" width="375" height="157"/>
+                                        <rect key="frame" x="0.0" y="35" width="375" height="146"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SampleCell" textLabel="kls-lx-HUo" detailTextLabel="q89-cG-QKJ" rowHeight="81" style="IBUITableViewCellStyleSubtitle" id="Krh-oy-yNg">
@@ -176,9 +176,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bottomSeparatorView" destination="Yh3-2j-KB8" id="zpW-Eh-Q38"/>
                         <outlet property="gripperTopConstraint" destination="i9O-Ca-dEl" id="dnc-jH-9OZ"/>
                         <outlet property="gripperView" destination="a9W-1i-SjQ" id="F8r-3J-krv"/>
+                        <outlet property="headerSectionHeightConstraint" destination="Vli-YE-FaP" id="nxD-wZ-5v5"/>
                         <outlet property="tableView" destination="wq3-U1-URg" id="5aA-2q-q8G"/>
+                        <outlet property="topSeparatorView" destination="Qs0-SM-kfq" id="A3a-Zm-YHf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tqf-Sk-FEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
