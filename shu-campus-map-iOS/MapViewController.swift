@@ -47,9 +47,10 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         view.addSubview(mapView)
     }
-    
+
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
-        //let pois = mapView.visibleFeatures(at: CGPoint(x: -79.55634766619221, y: 40.30778640441582))
+        var service = FeatureService.init(dataSetUrl: "")
+        var features = service.GetFeatures()
     }
     
     // Use my marker

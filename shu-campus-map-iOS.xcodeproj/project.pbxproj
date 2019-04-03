@@ -20,6 +20,7 @@
 		FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07E221DF8D300081414 /* CustomMarker.swift */; };
 		FFDE3EB6223ED9ED00C49D8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */; };
 		FFDE3EBC224C146800C49D8E /* LegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE3EBB224C146800C49D8E /* LegendViewController.swift */; };
+		FFDE3EBE22526E9500C49D8E /* FeatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE3EBD22526E9500C49D8E /* FeatureService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		FFA5E07E221DF8D300081414 /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
 		FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFDE3EBB224C146800C49D8E /* LegendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendViewController.swift; sourceTree = "<group>"; };
+		FFDE3EBD22526E9500C49D8E /* FeatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeatureService.swift; path = "shu-campus-map-iOS/FeatureService.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		FFDE3EBA224BFF5D00C49D8E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FFDE3EBD22526E9500C49D8E /* FeatureService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDE3EBE22526E9500C49D8E /* FeatureService.swift in Sources */,
 				FF7869822214874900059DB1 /* AppDelegate.swift in Sources */,
 				FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */,
 				FFA5E07D221DBFA200081414 /* MapViewController.swift in Sources */,
