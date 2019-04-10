@@ -8,37 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		01E18D7751CD064036FB66B2 /* Pods_shu_campus_map_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C086BCBABB07DBF46F0AE23 /* Pods_shu_campus_map_iOS.framework */; };
-		5903B19D0FF1CA1077ACC3AA /* Pods_shu_campus_map_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD70C2371391EC2E63BBD03A /* Pods_shu_campus_map_iOSTests.framework */; };
-		E837E5625A7B945208FA50C8 /* Pods_shu_campus_map_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F18C2D986B3697FB9EAA69 /* Pods_shu_campus_map_iOSUITests.framework */; };
 		FF7869822214874900059DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7869812214874900059DB1 /* AppDelegate.swift */; };
 		FF7869892214874900059DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7869872214874900059DB1 /* Main.storyboard */; };
 		FF78698B2214874D00059DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF78698A2214874D00059DB1 /* Assets.xcassets */; };
 		FF78698E2214874D00059DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF78698C2214874D00059DB1 /* LaunchScreen.storyboard */; };
-		FF7869992214874D00059DB1 /* shu_campus_map_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7869982214874D00059DB1 /* shu_campus_map_iOSTests.swift */; };
-		FF7869A42214874D00059DB1 /* shu_campus_map_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7869A32214874D00059DB1 /* shu_campus_map_iOSUITests.swift */; };
 		FFA5E07D221DBFA200081414 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07C221DBFA200081414 /* MapViewController.swift */; };
 		FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5E07E221DF8D300081414 /* CustomMarker.swift */; };
-		FFDE3EB6223ED9ED00C49D8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */; };
+		FFB69431225BF5EA00736690 /* LegendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB69430225BF5EA00736690 /* LegendTableViewCell.swift */; };
+		FFB69435225BFB0E00736690 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFB69434225BFB0E00736690 /* GoogleService-Info.plist */; };
 		FFDE3EBC224C146800C49D8E /* LegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE3EBB224C146800C49D8E /* LegendViewController.swift */; };
-		FFDE3EBE22526E9500C49D8E /* FeatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE3EBD22526E9500C49D8E /* FeatureService.swift */; };
+		FFF9AC73225BB84C006DBD83 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF9AC72225BB84C006DBD83 /* Building.swift */; };
+		FFF9AC75225BB85B006DBD83 /* ParkingLot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF9AC74225BB85B006DBD83 /* ParkingLot.swift */; };
+		FFF9AC77225BC020006DBD83 /* CustomGeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF9AC76225BC020006DBD83 /* CustomGeoPoint.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FF7869952214874D00059DB1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF7869762214874900059DB1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FF78697D2214874900059DB1;
-			remoteInfo = "shu-campus-map-iOS";
-		};
-		FF7869A02214874D00059DB1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF7869762214874900059DB1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FF78697D2214874900059DB1;
-			remoteInfo = "shu-campus-map-iOS";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		13F18C2D986B3697FB9EAA69 /* Pods_shu_campus_map_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shu_campus_map_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,17 +38,14 @@
 		FF78698A2214874D00059DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF78698D2214874D00059DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF78698F2214874D00059DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF7869942214874D00059DB1 /* shu-campus-map-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shu-campus-map-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF7869982214874D00059DB1 /* shu_campus_map_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shu_campus_map_iOSTests.swift; sourceTree = "<group>"; };
-		FF78699A2214874D00059DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF78699F2214874D00059DB1 /* shu-campus-map-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shu-campus-map-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF7869A32214874D00059DB1 /* shu_campus_map_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shu_campus_map_iOSUITests.swift; sourceTree = "<group>"; };
-		FF7869A52214874D00059DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA5E07C221DBFA200081414 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FFA5E07E221DF8D300081414 /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
-		FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFB69430225BF5EA00736690 /* LegendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendTableViewCell.swift; sourceTree = "<group>"; };
+		FFB69434225BFB0E00736690 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFDE3EBB224C146800C49D8E /* LegendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendViewController.swift; sourceTree = "<group>"; };
-		FFDE3EBD22526E9500C49D8E /* FeatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeatureService.swift; path = "shu-campus-map-iOS/FeatureService.swift"; sourceTree = SOURCE_ROOT; };
+		FFF9AC72225BB84C006DBD83 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		FFF9AC74225BB85B006DBD83 /* ParkingLot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLot.swift; sourceTree = "<group>"; };
+		FFF9AC76225BC020006DBD83 /* CustomGeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGeoPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,22 +54,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E18D7751CD064036FB66B2 /* Pods_shu_campus_map_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF7869912214874D00059DB1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5903B19D0FF1CA1077ACC3AA /* Pods_shu_campus_map_iOSTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF78699C2214874D00059DB1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E837E5625A7B945208FA50C8 /* Pods_shu_campus_map_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				FF7869802214874900059DB1 /* shu-campus-map-iOS */,
-				FF7869972214874D00059DB1 /* shu-campus-map-iOSTests */,
-				FF7869A22214874D00059DB1 /* shu-campus-map-iOSUITests */,
 				FF78697F2214874900059DB1 /* Products */,
 				B45EF55B97FDE8857B916C29 /* Pods */,
 				5E44408C2319E52B8D806B7B /* Frameworks */,
@@ -136,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				FF78697E2214874900059DB1 /* shu-campus-map-iOS.app */,
-				FF7869942214874D00059DB1 /* shu-campus-map-iOSTests.xctest */,
-				FF78699F2214874D00059DB1 /* shu-campus-map-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,44 +104,45 @@
 		FF7869802214874900059DB1 /* shu-campus-map-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				FFDE3EBA224BFF5D00C49D8E /* Services */,
+				FFB6942D225BEE8300736690 /* Legend */,
+				FFF9AC71225BB837006DBD83 /* Models */,
 				FF7869812214874900059DB1 /* AppDelegate.swift */,
-				FFDE3EB5223ED9ED00C49D8E /* GoogleService-Info.plist */,
 				FF7869872214874900059DB1 /* Main.storyboard */,
+				FFB69434225BFB0E00736690 /* GoogleService-Info.plist */,
 				FF78698A2214874D00059DB1 /* Assets.xcassets */,
+				FFB6942C225BEE6E00736690 /* Map */,
 				FF78698C2214874D00059DB1 /* LaunchScreen.storyboard */,
 				FF78698F2214874D00059DB1 /* Info.plist */,
-				FFA5E07C221DBFA200081414 /* MapViewController.swift */,
-				FFA5E07E221DF8D300081414 /* CustomMarker.swift */,
-				FFDE3EBB224C146800C49D8E /* LegendViewController.swift */,
 			);
 			path = "shu-campus-map-iOS";
 			sourceTree = "<group>";
 		};
-		FF7869972214874D00059DB1 /* shu-campus-map-iOSTests */ = {
+		FFB6942C225BEE6E00736690 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				FF7869982214874D00059DB1 /* shu_campus_map_iOSTests.swift */,
-				FF78699A2214874D00059DB1 /* Info.plist */,
+				FFA5E07E221DF8D300081414 /* CustomMarker.swift */,
+				FFA5E07C221DBFA200081414 /* MapViewController.swift */,
 			);
-			path = "shu-campus-map-iOSTests";
+			path = Map;
 			sourceTree = "<group>";
 		};
-		FF7869A22214874D00059DB1 /* shu-campus-map-iOSUITests */ = {
+		FFB6942D225BEE8300736690 /* Legend */ = {
 			isa = PBXGroup;
 			children = (
-				FF7869A32214874D00059DB1 /* shu_campus_map_iOSUITests.swift */,
-				FF7869A52214874D00059DB1 /* Info.plist */,
+				FFDE3EBB224C146800C49D8E /* LegendViewController.swift */,
+				FFB69430225BF5EA00736690 /* LegendTableViewCell.swift */,
 			);
-			path = "shu-campus-map-iOSUITests";
+			path = Legend;
 			sourceTree = "<group>";
 		};
-		FFDE3EBA224BFF5D00C49D8E /* Services */ = {
+		FFF9AC71225BB837006DBD83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FFDE3EBD22526E9500C49D8E /* FeatureService.swift */,
+				FFF9AC72225BB84C006DBD83 /* Building.swift */,
+				FFF9AC74225BB85B006DBD83 /* ParkingLot.swift */,
+				FFF9AC76225BC020006DBD83 /* CustomGeoPoint.swift */,
 			);
-			path = Services;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,44 +167,6 @@
 			productReference = FF78697E2214874900059DB1 /* shu-campus-map-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FF7869932214874D00059DB1 /* shu-campus-map-iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FF7869AB2214874D00059DB1 /* Build configuration list for PBXNativeTarget "shu-campus-map-iOSTests" */;
-			buildPhases = (
-				01150A9E0B8FD405E2490FA9 /* [CP] Check Pods Manifest.lock */,
-				FF7869902214874D00059DB1 /* Sources */,
-				FF7869912214874D00059DB1 /* Frameworks */,
-				FF7869922214874D00059DB1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FF7869962214874D00059DB1 /* PBXTargetDependency */,
-			);
-			name = "shu-campus-map-iOSTests";
-			productName = "shu-campus-map-iOSTests";
-			productReference = FF7869942214874D00059DB1 /* shu-campus-map-iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FF78699E2214874D00059DB1 /* shu-campus-map-iOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FF7869AE2214874D00059DB1 /* Build configuration list for PBXNativeTarget "shu-campus-map-iOSUITests" */;
-			buildPhases = (
-				9F13ED2AA1A4BEBCC1F1BF30 /* [CP] Check Pods Manifest.lock */,
-				FF78699B2214874D00059DB1 /* Sources */,
-				FF78699C2214874D00059DB1 /* Frameworks */,
-				FF78699D2214874D00059DB1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FF7869A12214874D00059DB1 /* PBXTargetDependency */,
-			);
-			name = "shu-campus-map-iOSUITests";
-			productName = "shu-campus-map-iOSUITests";
-			productReference = FF78699F2214874D00059DB1 /* shu-campus-map-iOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -257,14 +179,6 @@
 				TargetAttributes = {
 					FF78697D2214874900059DB1 = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					FF7869932214874D00059DB1 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = FF78697D2214874900059DB1;
-					};
-					FF78699E2214874D00059DB1 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = FF78697D2214874900059DB1;
 					};
 				};
 			};
@@ -282,8 +196,6 @@
 			projectRoot = "";
 			targets = (
 				FF78697D2214874900059DB1 /* shu-campus-map-iOS */,
-				FF7869932214874D00059DB1 /* shu-campus-map-iOSTests */,
-				FF78699E2214874D00059DB1 /* shu-campus-map-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,51 +206,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF78698E2214874D00059DB1 /* LaunchScreen.storyboard in Resources */,
-				FFDE3EB6223ED9ED00C49D8E /* GoogleService-Info.plist in Resources */,
 				FF78698B2214874D00059DB1 /* Assets.xcassets in Resources */,
 				FF7869892214874900059DB1 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF7869922214874D00059DB1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF78699D2214874D00059DB1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				FFB69435225BFB0E00736690 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01150A9E0B8FD405E2490FA9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-shu-campus-map-iOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2AAED65AC7DB56DC9CD1208B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,47 +246,35 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-shu-campus-map-iOS/Pods-shu-campus-map-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-shu-campus-map-iOS/Pods-shu-campus-map-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F13ED2AA1A4BEBCC1F1BF30 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-shu-campus-map-iOSUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -420,44 +284,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDE3EBE22526E9500C49D8E /* FeatureService.swift in Sources */,
+				FFF9AC73225BB84C006DBD83 /* Building.swift in Sources */,
 				FF7869822214874900059DB1 /* AppDelegate.swift in Sources */,
 				FFA5E07F221DF8D300081414 /* CustomMarker.swift in Sources */,
 				FFA5E07D221DBFA200081414 /* MapViewController.swift in Sources */,
+				FFF9AC75225BB85B006DBD83 /* ParkingLot.swift in Sources */,
 				FFDE3EBC224C146800C49D8E /* LegendViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF7869902214874D00059DB1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF7869992214874D00059DB1 /* shu_campus_map_iOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF78699B2214874D00059DB1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF7869A42214874D00059DB1 /* shu_campus_map_iOSUITests.swift in Sources */,
+				FFB69431225BF5EA00736690 /* LegendTableViewCell.swift in Sources */,
+				FFF9AC77225BC020006DBD83 /* CustomGeoPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FF7869962214874D00059DB1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FF78697D2214874900059DB1 /* shu-campus-map-iOS */;
-			targetProxy = FF7869952214874D00059DB1 /* PBXContainerItemProxy */;
-		};
-		FF7869A12214874D00059DB1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FF78697D2214874900059DB1 /* shu-campus-map-iOS */;
-			targetProxy = FF7869A02214874D00059DB1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FF7869872214874900059DB1 /* Main.storyboard */ = {
@@ -633,92 +471,6 @@
 			};
 			name = Release;
 		};
-		FF7869AC2214874D00059DB1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD78296078E9B83E4B5B407E /* Pods-shu-campus-map-iOSTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46M24J9J9J;
-				INFOPLIST_FILE = "shu-campus-map-iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "r.shu-campus-map-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shu-campus-map-iOS.app/shu-campus-map-iOS";
-			};
-			name = Debug;
-		};
-		FF7869AD2214874D00059DB1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 440D19A2E3D35419D1FB3998 /* Pods-shu-campus-map-iOSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46M24J9J9J;
-				INFOPLIST_FILE = "shu-campus-map-iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "r.shu-campus-map-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shu-campus-map-iOS.app/shu-campus-map-iOS";
-			};
-			name = Release;
-		};
-		FF7869AF2214874D00059DB1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D737801C2FE823FD9B8267CE /* Pods-shu-campus-map-iOSUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46M24J9J9J;
-				INFOPLIST_FILE = "shu-campus-map-iOSUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "r.shu-campus-map-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "shu-campus-map-iOS";
-			};
-			name = Debug;
-		};
-		FF7869B02214874D00059DB1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4206589868D363455B3FAB2C /* Pods-shu-campus-map-iOSUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46M24J9J9J;
-				INFOPLIST_FILE = "shu-campus-map-iOSUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "r.shu-campus-map-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "shu-campus-map-iOS";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -736,24 +488,6 @@
 			buildConfigurations = (
 				FF7869A92214874D00059DB1 /* Debug */,
 				FF7869AA2214874D00059DB1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FF7869AB2214874D00059DB1 /* Build configuration list for PBXNativeTarget "shu-campus-map-iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FF7869AC2214874D00059DB1 /* Debug */,
-				FF7869AD2214874D00059DB1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FF7869AE2214874D00059DB1 /* Build configuration list for PBXNativeTarget "shu-campus-map-iOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FF7869AF2214874D00059DB1 /* Debug */,
-				FF7869B02214874D00059DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

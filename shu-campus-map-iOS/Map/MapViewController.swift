@@ -13,6 +13,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     private var SetonHillBounds: MGLCoordinateBounds!
     private var SetonHillCoords: CLLocationCoordinate2D!
+    public var MapView: MGLMapView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,31 +27,34 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         SetonHillCoords = CLLocationCoordinate2D(latitude: 40.308959, longitude: -79.555997)
         
         let styleURL = URL(string: "mapbox://styles/ck108860/cjrjllu0r06rt2sl9y702tkbe")
-        let mapView = MGLMapView(frame: view.bounds,
+        MapView = MGLMapView(frame: view.bounds,
                                  styleURL: styleURL)
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.camera = MGLMapCamera(lookingAtCenter: SetonHillCoords, altitude: 4500, pitch: 45, heading: 300)
-        mapView.minimumZoomLevel = 12
-        mapView.showsHeading = false
+        MapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        MapView.camera = MGLMapCamera(lookingAtCenter: SetonHillCoords, altitude: 4500, pitch: 45, heading: 300)
+        MapView.minimumZoomLevel = 12
+        MapView.showsHeading = false
         
         // Set the map’s center coordinate and zoom level.
-        mapView.setCenter(SetonHillCoords, zoomLevel: 15, animated: false)
+        MapView.setCenter(SetonHillCoords, zoomLevel: 15, animated: false)
         
         // Set the delegate property of our map view to `self` after instantiating it.
-        mapView.delegate = self
+        MapView.delegate = self
         
         // Seton Hill bounds
         let northeast = CLLocationCoordinate2D(latitude: 40.336966, longitude: -79.525452)
         let southwest = CLLocationCoordinate2D(latitude: 40.28413, longitude: -79.598397)
         SetonHillBounds = MGLCoordinateBounds(sw: southwest, ne: northeast)
-        mapView.showsUserLocation = true
+        MapView.showsUserLocation = true
         
-        view.addSubview(mapView)
+        view.addSubview(MapView)
     }
 
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
-        var service = FeatureService.init(dataSetUrl: "")
-        var features = service.GetFeatures()
+        
+    }
+    
+    func goToCoordinate(){
+        
     }
     
     // Use my marker

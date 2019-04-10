@@ -8,9 +8,12 @@
 
 import UIKit
 import Pulley
+import FirebaseFirestore
+import Firebase
+import Mapbox.MGLMapCamera
 
 class LegendViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var gripperView: UIView!
     @IBOutlet weak var topSeparatorView: UIView!
@@ -19,7 +22,6 @@ class LegendViewController: UIViewController {
     @IBOutlet var gripperTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var headerSectionHeightConstraint: NSLayoutConstraint!
-    
     
     fileprivate var drawerBottomSafeArea: CGFloat = 0.0 {
         didSet {
@@ -30,23 +32,78 @@ class LegendViewController: UIViewController {
         }
     }
     
+    private var buildings: [Building] = []
+    private var documents: [DocumentSnapshot] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //FirebaseApp.configure()
+        tableView.dataSource = self
+        tableView.delegate = self
+        query = buildingsBaseQuery()
         // Do any additional setup after loading the view.
         gripperView.layer.cornerRadius = 2.5
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ObserveBuildings()
+        // stub
     }
-    */
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopObserving()
+    }
+    
+    fileprivate func buildingsBaseQuery() -> Query {
+        let firestore: Firestore = Firestore.firestore()
+        return firestore.collection("buildings")
+    }
+    
+    fileprivate var query: Query? {
+        didSet {
+            if let listener = listener {
+                listener.remove()
+                ObserveBuildings()
+            }
+        }
+    }
+    
+    private var listener: ListenerRegistration?
+    
+    fileprivate func ObserveBuildings() {
+        guard let query = query else { return }
+        stopObserving()
+        
+        // Display data from Firestore, part one
+        query.addSnapshotListener { [unowned self] (snapshot, error) in
+            guard let snapshot = snapshot else {
+                print("Error fetching snapshot results: \(error!)")
+                return
+            }
+            let models = snapshot.documents.map { (document) -> Building in
+                if let model = Building(dictionary: document.data()) {
+                    return model
+                } else {
+                    // Don't use fatalError here in a real app.
+                    fatalError("Unable to initialize type \(Building.self) with dictionary \(document.data())")
+                }
+            }
+            self.buildings = models
+            self.documents = snapshot.documents
+            
+            self.tableView.reloadData()
+        }
+    }
+    
+    fileprivate func stopObserving() {
+        listener?.remove()
+    }
+    
+    deinit {
+        listener?.remove()
+    }
 }
 
 extension LegendViewController: PulleyDrawerViewControllerDelegate {
@@ -114,11 +171,17 @@ extension LegendViewController: PulleyDrawerViewControllerDelegate {
 extension LegendViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return self.buildings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProtoCell",
+                                                 for: indexPath) as! LegendTableViewCell
+        if(self.buildings.count > 0) {
+            let building = buildings[indexPath.row]
+            cell.populate(building: building)
+        }
+        return cell
     }
 }
 
@@ -130,11 +193,12 @@ extension LegendViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let primaryContent = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PrimaryTransitionTargetViewController")
-        
+        let selected = buildings[indexPath.item]
+        let coordinates = selected.coordinates
+        let mapVC = self.parent?.children.first as? MapViewController
+        let coordsObj = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+        let camera = MGLMapCamera(lookingAtCenter: coordsObj, altitude: 500, pitch: mapVC!.MapView.camera.pitch, heading: mapVC!.MapView.camera.heading)
+        mapVC!.MapView.setCamera(camera, withDuration: 2, animationTimingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut))
         pulleyViewController?.setDrawerPosition(position: .collapsed, animated: true)
-        
-        pulleyViewController?.setPrimaryContentViewController(controller: primaryContent, animated: false)
     }
 }
